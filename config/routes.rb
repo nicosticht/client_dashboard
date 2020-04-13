@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'companies#index'
+  mount API::Root => '/'
   resources :clients
   resources :contractors
   resources :partner_companies

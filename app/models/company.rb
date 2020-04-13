@@ -23,6 +23,18 @@ class Company < ApplicationRecord
 
   private
 
+  def employees_amount
+    employee_ids.size
+  end
+
+  def clients_amount
+    client_ids.size
+  end
+
+  def contractors_amount
+    contractor_ids.size
+  end
+
   def generate_token
     begin
       self.identity = SimpleTokenGenerator::Generator.call
