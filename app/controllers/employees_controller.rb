@@ -21,6 +21,17 @@ class EmployeesController < ApplicationController
     @employee = Employee.new
   end
 
+  # GET /employees/new_bulk
+  def new_bulk
+  end
+
+  # POST /employees/create_bulk
+  def create_bulk
+    Employee.create_employees params[:number_of_employees].to_i, params[:company_id].to_i
+    flash[:notice] = "Employees created successfully"
+    redirect_back fallback_location: root_url
+  end
+
   # GET /employees/1/edit
   def edit
   end
