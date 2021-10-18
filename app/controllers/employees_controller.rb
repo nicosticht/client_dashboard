@@ -32,6 +32,13 @@ class EmployeesController < ApplicationController
     redirect_back fallback_location: root_url
   end
 
+  def export
+    @employees = Employee.all
+    respond_to do |format|
+      format.xlsx
+    end
+  end
+
   # GET /employees/1/edit
   def edit
   end

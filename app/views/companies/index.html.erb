@@ -2,6 +2,8 @@
 <h1>Companies</h1>
 <div class="create-employees-btn"><%= button_to "Create employees in bulk", new_bulk_employees_path, method: :get, class: "btn btn-primary"%></div>
 <br></br>
+<div class="create-employees-btn"><%= button_to "Excel Upload", new_employees_import_path, method: :get, class: "btn btn-primary"%></div>
+<br></br>
   <table class="table table-hover table-sm">
     <thead class="thead-dark">
       <tr>
