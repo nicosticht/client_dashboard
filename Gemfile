@@ -42,10 +42,6 @@ gem 'jquery-rails'
 
 # Use SimpleTokenGenerator to generate identifier for specifix models
 gem 'simple_token_generator', github: 'nicosticht/simple_token_generator'
-# gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
-# gem 'axlsx_rails'
-# gem "roo"
-gem 'csv'
 
 # Use Faker to generate more usefull seed data.
 gem 'faker'

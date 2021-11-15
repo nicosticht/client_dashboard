@@ -47,7 +47,7 @@ class EmployeeImport
   end
 
   def invalid_file_format
-    ['.csv', '.xls', '.xlsx'].exclude?(File.extname(file.original_filename))
+    ['.xls', '.xlsx'].exclude?(File.extname(file.original_filename))
   end
 
   def load_imported_products(file)
