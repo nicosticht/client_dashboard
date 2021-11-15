@@ -1,9 +1,14 @@
+<div class="container">
+  <%= link_to 'Add Employees', new_employee_import_path, class: 'btn btn-primary' %>
+</div>
+
 <div class="container table-responsive">
   <h1>Employees</h1>
   <table class="table table-hover table-sm">
     <thead class="thead-dark">
       <tr>
         <th>Identifier</th>
+        <th>Id</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Company Name</th>
@@ -16,12 +21,13 @@
       <% @employees.each do |employee| %>
         <tr>
           <td><%= employee.identifier %></td>
+          <td><%= employee.id %></td>
           <td><%= employee.first_name %></td>
           <td><%= employee.last_name %></td>
           <td><%= employee.company.name %></td>
           <td><%= link_to employee.client_ids.count, clients_path(employee_id: employee) %></td>
           <td><%= link_to 'Show', employee %></td>
-          <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+          
           <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>

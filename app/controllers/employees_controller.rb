@@ -5,9 +5,9 @@ class EmployeesController < ApplicationController
   # GET /employees.json
   def index
     if params[:company_id].present?
-      @employees = Employee.where(company_id: params[:company_id]).all
+      @employees = Employee.where(company_id: params[:company_id]).order(created_at: :desc)
     else
-      @employees = Employee.all
+      @employees = Employee.order(created_at: :desc)
     end
   end
 

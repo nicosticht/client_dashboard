@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -42,9 +42,16 @@ gem 'jquery-rails'
 
 # Use SimpleTokenGenerator to generate identifier for specifix models
 gem 'simple_token_generator', github: 'nicosticht/simple_token_generator'
+# gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+# gem 'axlsx_rails'
+# gem "roo"
+gem 'csv'
 
 # Use Faker to generate more usefull seed data.
 gem 'faker'
+gem "roo", "~> 2.8.0"
+gem 'roo-xls', '~> 1.2'
+gem "iconv", "~> 1.0.3"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
